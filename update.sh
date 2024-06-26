@@ -10,7 +10,7 @@
 set -e -v
 
 # static:
-CRATE_NAME="cs2_generated"
+CRATE_NAME="generated"
 FILE_NAME="generated.rs"
 # XXX: These cause undefined behavior things if changed:
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")

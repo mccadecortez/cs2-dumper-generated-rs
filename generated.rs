@@ -39,7 +39,7 @@ mod soundsystem;
 mod vphysics2;
 #[path = "./cs2-dumper/output/worldrenderer.dll.rs"]
 mod worldrenderer;
-pub mod cs2_generated {
+pub mod generated {
     pub use crate::animationsystem::cs2_dumper::schemas::*;
     pub use crate::buttons::cs2_dumper::*;
     pub use crate::client::cs2_dumper::schemas::*;
