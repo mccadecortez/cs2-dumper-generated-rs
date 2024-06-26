@@ -1,0 +1,15 @@
+[package]
+name = "cs2_generated"
+version = "2.0.14016"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+path = "generated.rs"
+
+[profile.release]
+overflow-checks = true
+
+[profile.dev]
+overflow-checks = true
