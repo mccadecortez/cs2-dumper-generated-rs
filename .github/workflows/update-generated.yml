@@ -7,14 +7,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+          submodules: true
+
+      # FIXME: ensure submodule has all commits
+      - name: Update submodules
+        run: git submodule update --init --recursive
 
       - uses: actions-rust-lang/setup-rust-toolchain@v1
 
