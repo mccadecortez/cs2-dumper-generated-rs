@@ -3,5 +3,5 @@ updates:
   - package-ecosystem: gitsubmodule
     schedule:
       interval: "daily"
+      time: "12:00"
     directory: /cs2-dumper
-    time: "12:00"

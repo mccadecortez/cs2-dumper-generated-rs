@@ -7,7 +7,7 @@
 # TODO: This could be a CI thing that publishes a crate instead of needing a person to manually run, but it requires a windows host to run Counter-Strike in server mode
 #   License issues make this a headache without renting a dedicated box, you need windows server software and custom tooling for docker images / anisble of using SteamCMD
 
-set -e -v
+set -e -x
 
 # static:
 CRATE_NAME="generated"
@@ -79,6 +79,9 @@ cargo fmt -- "${FILE_NAME}" || echo "'cargo fmt' failed: $?"
 # Run git log and grep for "Game Update"
 echo "git log"
 export GIT_DIR="${SCRIPT_DIR}/cs2-dumper/.git"
+export PAGER=cat
+
+echo "Version: $(git log | grep -im 1 "Game Update")"
 VERSION="$(git log | grep -im 1 "Game Update" | grep -ioE '[0-9]{5,10}' | grep -ioE '[0-9]+$')"
 
 if [[ ! "${VERSION+x}" ]]; then
