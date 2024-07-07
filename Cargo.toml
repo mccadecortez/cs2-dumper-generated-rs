@@ -1,6 +1,6 @@
 [package]
 name = "cs2_dumper_generated_rs"
-version = "2.0.14019"
+version = "2.0.140195"
 edition = "2021"
 readme = "README.md"
 repository = "https://github.com/mccadecortez/cs2-dumper-generated-rs"

@@ -73,8 +73,8 @@ done >> "${OUT}"
 echo "}" >> "${OUT}"
 ##############################
 
-echo "cargo fmt"
-cargo fmt -- "${FILE_NAME}" || echo "'cargo fmt' failed: $?"
+echo "rustfmt"
+rustfmt -- "${FILE_NAME}" || echo "'rustfmt' failed: $?"
 
 # Run git log and grep for "Game Update"
 echo "git log"
